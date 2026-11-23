@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>குறள்வேர்ஸ் | KuralVerse - திருக்குறள் உலகளாவிய தேடல்</title>
+    <meta name="description" content="திருக்குறள் 1330 குறள்களையும் முப்பால், அதிகாரங்கள், தமிழ் உரைகள் மற்றும் ஆங்கில மொழிபெயர்ப்புடன் நவீன வடிவில் வாசிக்கலாம்.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300;400;600;700;800&family=Noto+Serif+Tamil:wght@400;600;700;900&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="dark-mode">
+
+    <!-- Interactive Canvas for Floating Tamil Letters -->
+    <canvas id="tamilLettersCanvas"></canvas>
+
+    <!-- Faded Thiruvalluvar Statue Background Art -->
+    <div class="statue-bg-overlay" style="background-image: url('images/thiruvalluvar_statue.png');"></div>
+
+    <div class="app-container">
+        
+        <!-- Header & Branding -->
+        <header class="app-header">
+            <div class="brand-container">
+                <img src="images/thiruvalluvar.png" alt="திருவள்ளுவர்" class="brand-logo" data-tooltip="Poet Thiruvalluvar Portrait">
+                <div class="brand-text">
+                    <h1 class="site-title" data-tooltip="KuralVerse - Tamil Classic">குறள்வேர்ஸ் <span class="en-sub">KuralVerse</span></h1>
+                    <p class="site-tagline" data-tooltip="Classical Tamil Scripture • 1330 Sacred Couplets">செம்மொழித் தமிழ் மறை • 1330 அருங்குறள்கள்</p>
+                </div>
+            </div>
+            
+            <div class="header-actions">
+                <button id="themeToggleBtn" class="btn-icon" data-tooltip="Toggle Dark/Light Mode">
+                    <span class="icon">🌙</span>
+                </button>
+                <button id="bookmarksModalBtn" class="btn-secondary" data-tooltip="View Saved Favorites">
+                    <span class="icon">⭐</span>
+                    <span class="btn-text">பிடித்தவை (<span id="bookmarkCount">0</span>)</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs (Mode Switcher) -->
+        <nav class="mode-navigation">
+            <button class="nav-tab active" data-mode="search" data-tooltip="Direct Kural Search Engine">
+                <span class="tab-icon">🎯</span>
+                <span class="tab-label">குறள் தேடல்</span>
+            </button>
+            <button class="nav-tab" data-mode="book" data-tooltip="Explore Chapters Like a Book">
+                <span class="tab-icon">📖</span>
+                <span class="tab-label">அதிகாரங்கள் நூல்</span>
+            </button>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- MODE 1: DIRECT KURAL SEARCH -->
+            <section id="searchModeSection" class="view-section active">
+                
+                <!-- Search & Controls Box -->
+                <div class="search-card-box">
+                    <div class="search-input-wrapper">
+                        <label for="kuralInput" class="search-label" data-tooltip="Enter Kural Number from 1 to 1330">குறள் எண் அல்லது தலைப்பை உள்ளிடுக (1 - 1330):</label>
+                        <div class="input-action-group">
+                            <div class="num-input-box" data-tooltip="Enter Number 1-1330">
+                                <span class="input-prefix">குறள் #</span>
+                                <input type="number" id="kuralInput" min="1" max="1330" value="1" placeholder="1-1330">
+                            </div>
+                            <button id="searchKuralBtn" class="btn-primary" data-tooltip="Search / Find Kural">
+                                <span class="icon">🔍</span>
+                                <span class="btn-text">தேடுக</span>
+                            </button>
+                            <button id="randomKuralBtn" class="btn-accent" data-tooltip="Get Random Kural">
+                                <span class="icon">🎲</span>
+                                <span class="btn-text">சீரற்ற குறள்</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Paal Quick Jump Pills -->
+                    <div class="paal-quick-pills">
+                        <span class="pill-title" data-tooltip="Quick Jump to 3 Main Sections">முப்பால் விரைவு வழி:</span>
+                        <button class="paal-pill" data-kural="1" data-tooltip="Section 1: Virtue (Kurals 1-380)">அறத்துப்பால் (1 - 380)</button>
+                        <button class="paal-pill" data-kural="391" data-tooltip="Section 2: Wealth & Polity (Kurals 381-1080)">பொருட்பால் (381 - 1080)</button>
+                        <button class="paal-pill" data-kural="1081" data-tooltip="Section 3: Love & Delight (Kurals 1081-1330)">இன்பத்துப்பால் (1081 - 1330)</button>
+                    </div>
+                </div>
+
+                <!-- Display Card for Single Kural -->
+                <div id="kuralDisplayCard" class="kural-card">
+                    <div class="card-glow"></div>
+                    
+                    <!-- Card Top Header -->
+                    <div class="card-header">
+                        <div class="kural-badge-group">
+                            <span id="paalBadge" class="badge badge-paal" data-tooltip="Section Name">அறத்துப்பால்</span>
+                            <span id="iyalBadge" class="badge badge-iyal" data-tooltip="Sub-section Name">பாயிரவியல்</span>
+                            <span id="athigaramBadge" class="badge badge-athigaram" data-tooltip="Chapter Number and Name">அதிகாரம் 1: கடவுள் வாழ்த்து</span>
+                        </div>
+                        <div class="kural-number-tag" data-tooltip="Current Kural Number out of 1330">
+                            குறள் <span id="kuralNumDisplay">1</span> / 1330
+                        </div>
+                    </div>
+
+                    <!-- Tamil Couplet Verses -->
+                    <div class="couplet-container" data-tooltip="Tamil Couplet Lines">
+                        <p id="kuralLine1" class="kural-line line-1" data-tooltip="Verse Line 1">அகர முதல எழுத்தெல்லாம் ஆதி</p>
+                        <p id="kuralLine2" class="kural-line line-2" data-tooltip="Verse Line 2">பகவன் முதற்றே உலகு.</p>
+                    </div>
+
+                    <!-- Audio Narration Tool -->
+                    <div class="audio-control-bar">
+                        <button id="speakTamilBtn" class="btn-audio" data-tooltip="Listen to Tamil Reading Voice">
+                            <span class="icon">🔊</span>
+                            <span>தமிழ் உரை கேட்க (Audio Narration)</span>
+                        </button>
+                        <button id="speakEnglishBtn" class="btn-audio secondary" data-tooltip="Listen to English Translation Voice">
+                            <span class="icon">🌐</span>
+                            <span>Read English Translation</span>
+                        </button>
+                    </div>
+
+                    <!-- Single Unified Tamil Meaning & English Explanation -->
+                    <div class="explanations-wrapper">
+                        
+                        <!-- Single Tamil Meaning: குறளின் விளக்கம் -->
+                        <div class="explanation-box active" data-tooltip="Best Tamil Meaning for this Kural">
+                            <h3 class="exp-title">
+                                <span class="exp-icon">📖</span> குறளின் விளக்கம்
+                            </h3>
+                            <p id="expTamilVilakkam" class="exp-content">
+                                எழுத்துக்கள் எல்லாம் 'அ' என்னும் எழுத்தை முதலாகக் கொண்டுள்ளன. அதுபோல, உலகம் ஆதிபகவனை முதலாகக் கொண்டுள்ளது.
+                            </p>
+                        </div>
+
+                        <!-- English Translation -->
+                        <div class="explanation-box" data-tooltip="English Translation & Meaning">
+                            <h3 class="exp-title">
+                                <span class="exp-icon">🌐</span> English Translation & Meaning
+                            </h3>
+                            <p id="expEnglishTrans" class="exp-translation">
+                                "As the letter A is the first of all letters, so the ancient God is first in the world."
+                            </p>
+                            <p id="expEnglishDetail" class="exp-content">
+                                As all letters have 'A' for their chief, so the world has the primal God for its chief.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Card Action Footer -->
+                    <div class="card-footer">
+                        <button id="prevKuralBtn" class="btn-nav" data-tooltip="Previous Kural (Left Arrow Key)">
+                            <span class="icon">⬅️</span> முந்தைய குறள்
+                        </button>
+                        
+                        <div class="action-buttons-group">
+                            <button id="bookmarkToggleBtn" class="btn-action" data-tooltip="Bookmark / Save Kural">
+                                <span class="icon">⭐</span>
+                                <span class="action-text">சேமிக்க</span>
+                            </button>
+                            <button id="copyKuralBtn" class="btn-action" data-tooltip="Copy to Clipboard">
+                                <span class="icon">📋</span>
+                                <span class="action-text">பிரதி</span>
+                            </button>
+                            <button id="shareKuralBtn" class="btn-action" data-tooltip="Share This Kural">
+                                <span class="icon">📤</span>
+                                <span class="action-text">பகிர்</span>
+                            </button>
+                        </div>
+
+                        <button id="nextKuralBtn" class="btn-nav" data-tooltip="Next Kural (Right Arrow Key)">
+                            அடுத்த குறள் <span class="icon">➡️</span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- MODE 2: BOOK & CHAPTER EXPLORER -->
+            <section id="bookModeSection" class="view-section">
+                
+                <div class="book-container-card">
+                    <div class="book-header">
+                        <h2 data-tooltip="Thirukkural Book of Chapters">📖 திருக்குறள் அதிகாரங்கள் நூல்</h2>
+                        <p data-tooltip="Read 133 Chapters & 3 Main Sections like a Book">133 அதிகாரங்கள் மற்றும் 3 பால்களையும் நூல் வடிவில் வாசியுங்கள்</p>
+                    </div>
+
+                    <!-- Paal Tabs for Book -->
+                    <div class="paal-tabs-bar">
+                        <button class="paal-tab active" data-paal="1" data-tooltip="Virtue (Chapters 1 - 38)">
+                            <span class="paal-name">அறத்துப்பால்</span>
+                            <span class="paal-range">1 - 38 அதிகாரங்கள்</span>
+                        </button>
+                        <button class="paal-tab" data-paal="2" data-tooltip="Wealth & Polity (Chapters 39 - 108)">
+                            <span class="paal-name">பொருட்பால்</span>
+                            <span class="paal-range">39 - 108 அதிகாரங்கள்</span>
+                        </button>
+                        <button class="paal-tab" data-paal="3" data-tooltip="Love & Joy (Chapters 109 - 133)">
+                            <span class="paal-name">இன்பத்துப்பால்</span>
+                            <span class="paal-range">109 - 133 அதிகாரங்கள்</span>
+                        </button>
+                    </div>
+
+                    <!-- Chapter Selector Dropdown -->
+                    <div class="chapter-selector-box">
+                        <label for="chapterSelect" data-tooltip="Select a Chapter from Dropdown">அதிகாரத்தை தேர்ந்தெடுக்கவும்:</label>
+                        <select id="chapterSelect" class="chapter-dropdown">
+                            <!-- Populated dynamically via JS -->
+                        </select>
+                    </div>
+
+                    <!-- Book Page Couplets Display (10 Kurals per Athigaram) -->
+                    <div class="book-pages-wrapper">
+                        <div class="book-page-header">
+                            <h3 id="currentChapterTitle" data-tooltip="Active Chapter Title">அதிகாரம் 1: கடவுள் வாழ்த்து</h3>
+                            <span id="currentChapterRange" class="chapter-range-tag" data-tooltip="10 Couplets in this Chapter">குறள்கள் 1 - 10</span>
+                        </div>
+
+                        <div id="chapterKuralsList" class="chapter-kurals-list">
+                            <!-- 10 Kurals rendered here dynamically -->
+                        </div>
+
+                        <div class="book-page-navigation">
+                            <button id="prevChapterBtn" class="btn-secondary" data-tooltip="Previous Chapter">⬅️ முந்தைய அதிகாரம்</button>
+                            <button id="nextChapterBtn" class="btn-secondary" data-tooltip="Next Chapter">அடுத்த அதிகாரம் ➡️</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Bookmarks Modal / Drawer -->
+        <div id="bookmarksModal" class="modal-overlay">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 data-tooltip="Your Saved Favorite Kurals">⭐ சேமிக்கப்பட்ட குறள்கள் (Saved Kurals)</h2>
+                    <button id="closeModalBtn" class="close-btn" data-tooltip="Close Modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <ul id="bookmarksList" class="bookmarks-list">
+                        <!-- Bookmarks injected here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p data-tooltip="KuralVerse Full Stack Java App">குறள்வேர்ஸ் | KuralVerse Full-Stack Application • Powered by Core Java HttpServer</p>
+            <p class="small-text" data-tooltip="1330 Thirukkural Dataset">திருக்குறள் 1330 முழுமையான பாடல்கள் தரவுத்தளத்துடன் இயங்குகிறது.</p>
+        </footer>
+
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toastNotification" class="toast">பிரதி செய்யப்பட்டது!</div>
+
+    <!-- Floating Global Hover Tooltip -->
+    <div id="globalHoverTooltip" class="hover-tooltip"></div>
+
+    <!-- Application Script -->
+    <script src="script.js"></script>
+</body>
+</html>

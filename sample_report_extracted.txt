@@ -1,0 +1,940 @@
+--- PAGE 1 ---
+SRM VALLIAMMAI ENGINEERING COLLEGE 
+(An Autonomous Institution) 
+SRM Nagar, Kattankulathur, Chengalpattu District - 603203, Tamil Nadu. 
+ 
+DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING 
+REPORT 
+on 
+ 
+“CS3741 - INTERNSHIP” 
+at 
+AMDOX TECHNOLOGIES. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SUBMITTED BY 
+ 
+ 
+142223104071 – KEVIN RAJ.S  
+SEVENTH SEMESTER 
+2026-2027 
+--- PAGE 2 ---
+ii  
+SRM VALLIAMMAI ENGINEERING COLLEGE 
+(An Autonomous Institution) 
+SRM Nagar, Kattankulathur - 603203. 
+DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING 
+ 
+CERTIFICATE 
+ 
+This is to certify that KEVIN RAJ S (Reg.No.142223104071) - VII Semester,B.E 
+(Computer Science and Engineering) has completed the Internship in “DATA 
+SCIENCE AND ANALYTICS” during the period 29 th December 2025 to 28 th 
+February 2026 at “AMDOX TECHNOLOGIES.”  and has been submitted to 
+Anna University. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SIGNATURE OF MENTOR 
+Ms. S ANSLAM SIBI, M.E., Ph.D., 
+ASSISTANT PROFESSOR (Sr.G) 
+Department of CSE, 
+SRM Valliammai Engineering College, 
+Kattankulathur – 603 203. 
+SIGNATURE OF HOD 
+Dr. B. VANATHI, M.E., Ph.D., 
+PROFESSOR & HEAD, 
+Department of CSE, 
+SRM Valliammai Engineering College, 
+Kattankulathur – 603 203. 
+ 
+ 
+ 
+ 
+ 
+Submitted for the university examination held on  at 
+SRM Valliammai Engineering College, Kattankulattur. 
+--- PAGE 3 ---
+iii  
+INDEX 
+ 
+ 
+ 
+ 
+SI.NO TITLE PAGE NO 
+ 
+ACKNOWLEDGEMENT iv 
+ 
+VISION & MISSION v 
+ 
+ABSTRACT vi 
+ 
+LIST OF FIGURES vii 
+1 INTRODUCTION 1 
+2 COMPANY PROFILE 3 
+3 INTERNSHIP DESCRIPTION 5 
+4 TECHNOLOGIES USED 7 
+5 INTERNSHIP PROJECT 9 
+6 SOURCE CODE 15 
+7 OUTPUT 28 
+8 CONCLUSION 30 
+9 CERTIFICATE 32 
+--- PAGE 4 ---
+iv  
+ACKNOWLEDGEMENT 
+I wish to express my heartfelt gratitude to the eminent personalities who served as 
+the backbone of my internship's success, beyond my own efforts. I am sincerely 
+thankful to “AMDOX TECHNOLOGIES” for providing me with the opportunity 
+to undertake this internship. 
+I extend my sincere thanks to “ Mr.Sunil Kumar, Supervisor and Mr.Chandan 
+Mishra, Mentor” for their kind patronage and for all the facilities and guidances  
+provided that contributed to the successful completion of this internship. 
+We sincerely express our gratitude in depth to our esteemed Founder Chairman & 
+Chancellor Dr. T. R. Paarivendhar, Thiru. RaviPachamoothoo Chairman SRM 
+Group &  Pro-Chancellor (Admin) , Mrs. PadmapriyaRavi  Vice-Chairman, R. 
+Harini, Correspondent, SRM VEC and authorities of SRM VALLIAMMAI 
+ENGINEERING COLLEGE for the patronage on our welfare rooted in the 
+academic year. 
+ 
+We thank our sincere Principal Dr. M. Murugan, M.E., Ph.D., and Vice-Principal 
+Dr. Visalakshi. S, M.E., Ph.D., for the support and facilities they provided to 
+accomplish this internship. 
+I would like to thank my Head of the Department, Dr. B. Vanathi, M.E., Ph.D., for 
+her constructive criticism throughout my internship. 
+I am grateful to Ms. S Anslam Sibi, M.E., Ph.D., Assistant Professor (Sr. G), my 
+mentor and Internship  Coordinator, Department of Computer Science, for her 
+support and advice to complete the internship in above said organization. 
+I am extremely grateful to the staff members and friends in my department who 
+helped me in the successful completion of this internship. 
+
+--- PAGE 5 ---
+v  
+VISION AND MISSION 
+ 
+ 
+VISION 
+ 
+To devise captivating, fascinating, and unique practices of teaching that 
+discovers the trained talent and inherent competences of young minds to evolve as 
+humane professional Computer Science Engineers. 
+ 
+ 
+ 
+MISSION 
+ 
+• To provide students with challenging ventures, contributing to the betterment 
+of their selfdom to compete with international talents. 
+ 
+• To act as a motivational hub to exhibit practical knowledge with the latest 
+technological updates and research publications. 
+ 
+• To render ample knowledge to exhibit their ubiquitous talents for the social 
+prosperity and promote industry -institute harmony to upgrade the standards 
+for the international reputation. 
+--- PAGE 6 ---
+vi  
+ABSTRACT 
+Data Science combines statistical analysis, machine learning, and data visualization 
+techniques to extract meaningful insights from structured and unstructured data, enabling 
+organizations to make intelligent and data -driven decisions. As part of my two -month 
+internship at Amdox Technologies, I worked on two industry -oriented projects in the 
+field of Data Science and Machine Learning. The internship provided hands-on experience 
+in applying analytical techniques and developing intelligent applications to solve real -
+world problems while strengthening my technical and professional skills. 
+During the first month, I worked on an AI-Powered Employee Mood Analysis and Task 
+Recommendation System, which focused on analyzing employees' emotional states using 
+machine learning techniques and recommending suitable tasks based on their detected 
+mood. The system also identified employees experiencing prolonged stress or burnout and 
+generated alerts to assist human resource departments in taking timely corrective actions. 
+The project involved data preprocessing, exploratory data analysis, machine learning 
+model development, and visualization techniques. 
+During the second month, I developed a Medical Healthcare Recommendation System, 
+an intelligent application designed to predict possible diseases from user -provided 
+symptoms and provide personalized healthcare recommendations such as precautions, 
+dietary suggestions, workout plans, and general medical guidance. The project utilized 
+machine learning algorithms and data -driven techniques to generate accurate predictions 
+and assist users in obtaining preliminary healthcare recommendations through an 
+interactive and user-friendly interface. 
+Overall, the internship served as an excellent learning experience that strengthened my 
+technical foundation and prepared me to undertake more advanced projects in the fields of 
+Data Science, Machine Learning, Artificial Intelligence, and Software Development. The 
+knowledge, practical exposure, and confidence gained will play a vital role in my future 
+career as a technology professional. 
+--- PAGE 7 ---
+vii  
+LIST OF FIGURES 
+ 
+FIG.NO FIG.NAME PAGE.NO 
+5.1.            MOVING TO THE PROJECT’S MAIN FILE DIRECTORY 11 
+5.2             RUNNING PYTHON APP.PY 11 
+5.3.            MOVING TO THE PROJECT DIRECTORY AND RUNNING       14 
+                  BACKEND  
+5.4             HOME PAGE 14 
+7.1.            HOME PAGE 28 
+7.2             TASK CONTROL 28 
+7.3             SYMPTOM INPUT PAGE 29 
+7.4             MODEL PREDICTIONS AND SUGGESTIONS 29 
+--- PAGE 8 ---
+1  
+1. INTRODUCTION 
+1.1 INTERNSHIP OVERVIEW 
+This report highlights my two -month online internship in Data Science and 
+Analytics at Amdox Technologies, conducted from 29th December 2025 to 28th 
+February 2026. During the internship, I worked as part of a project team  under the 
+guidance of experienced industry mentors who provided technical training and 
+continuous support throughout the internship. The internship focused on applying 
+Data Science and Machine Learning concepts to solve real-world problems through 
+project-based learning. I successfully completed two projects  during the internship: 
+"AI-Powered Employee Mood Analysis and Task Recommendation System" and 
+"Medical Healthcare Recommendation System." These projects involved data  
+preprocessing, exploratory data analysis, machine learning model development, and 
+recommendation system implementation using Python and its Data Science 
+libraries. The internship also provided practical exposure to collaborative 
+development, analytical problem -solving, project documentation, and industry -
+standard software development practices, thereby enhancing both my technical 
+knowledge and professional skills. 
+1.2 OBJECTIVES 
+1. Skill Acquisition: Develop proficiency in Python programming and Data 
+Science libraries such as Pandas, NumPy, Scikit-learn, Matplotlib, and Seaborn for 
+data analysis and machine learning applications. 
+2. Data Preprocessing: Gain practical knowledge in collecting, cleaning, 
+transforming, and preprocessing datasets to improve the accuracy and efficiency of 
+machine learning models. 
+--- PAGE 9 ---
+2  
+3. Machine Learning Implementation: Learn to design, train, evaluate, and 
+optimize machine learning models for solving real-world analytical and prediction 
+problems. 
+4. Project Development: Participate in developing intelligent, data -driven 
+applications by implementing recommendation systems and predictive analytics 
+using modern Data Science techniques. 
+5. Data Visualization: Create meaningful visualizations and analytical reports to 
+interpret complex datasets and support informed decision-making. 
+6. Collaboration: Work effectively with industry mentors and multidisciplinary 
+teams to strengthen communication, teamwork, and project management skills. 
+7. Problem-Solving: Apply critical thinking, analytical reasoning, and machine 
+learning concepts to address real -world challenges in employee analytics and 
+healthcare domains. 
+8. Industry Exposure: Understand industry -standard development practices, 
+project documentation, model validation techniques, and professional software 
+development workflows. 
+9. Technical Enhancement: Improve programming, debugging, testing, and 
+documentation skills through continuous project implementation and mentor 
+guidance. 
+10. Hands-on Experience: Gain practical exposure to Data Science, Machine 
+Learning, predictive analytics, and intelligent recommendation systems using 
+Python and related technologies. 
+--- PAGE 10 ---
+3  
+2. COMPANY PROFILE 
+Amdox Technologies, headquartered in Bengaluru, Karnataka, is a dynamic 
+and rapidly growing technology company specializing in Information Technology 
+Services, Data Science, Artificial Intelligence, Machine Learning, and Software 
+Development. The company is committed to bridging the gap between academic 
+learning and industry requirements by providing students with practical exposure 
+through project -based internships, live technical training, and mentorship from 
+experienced professionals. Amdox  Technologies emphasizes experiential learning 
+by enabling interns to work on real -world projects while developing both technical 
+and professional skills. 
+The company focuses on developing innovative software solutions and 
+intelligent applications that address real -world business challenges. With expertise 
+in Data Science, Machine Learning, Artificial Intelligence, Full Stack 
+Development, Cloud Technologies,  and Data Analytics, Amdox Technologies 
+delivers scalable, efficient, and user-centric solutions tailored to the evolving needs 
+of businesses and organizations. The company also provides structured learning 
+platforms, career development programs, and project -based training to prepare 
+students for industry demands. 
+Amdox Technologies serves startups, educational institutions, and business 
+organizations by offering industry -oriented technology solutions and professional 
+training. Through its commitment to innovation, continuous learning, and quality 
+project delivery, the company has established itself as a valuable platform for 
+aspiring software developers, data scientists, and technology professionals seeking 
+practical industrial experience. 
+--- PAGE 11 ---
+4  
+Website: https://www.amdox.in/ 
+Industry: IT Services and Software development 
+Headquarters: Bengaluru, Karnataka, India 
+Type: Privately Held 
+Founded: 2024 
+Specialties: Data Science, Machine Learning, Artificial Intelligence, 
+Python Development, Full Stack Development, Data 
+Analytics, Web Application Development, Software 
+Development, Live Project Training, Industry-Oriented 
+Internship Programs 
+--- PAGE 12 ---
+5  
+3. INTERNSHIP DESCRIPTION 
+DOMAIN: DATA SCIENCE AND DATA ANALYTICS 
+3.1 ROLE AND RESPONSIBILITIES 
+ 
+My responsibilities during the internship were diverse and aimed at providing 
+comprehensive exposure to the field of Data Science, Machine Learning, and 
+Data Analytics. The key responsibilities included: 
+1. Data Collection and Preprocessing: Collecting, cleaning, transforming, and 
+preparing datasets for analysis by handling missing values, removing 
+inconsistencies, and performing feature engineering to improve data quality. 
+2. Exploratory Data Analysis: Analyzing datasets using statistical techniques 
+and visualization tools to identify patterns, trends, correlations, and meaningful 
+insights for decision-making. 
+3. Machine Learning Model Development: Designing, training, testing, and 
+evaluating machine learning models for predictive analysis and 
+recommendation system development using Python and its Data Science 
+libraries. 
+4. Project Development: Contributing to the design and implementation of data-
+driven applications, including the AI-Powered Employee Mood Analysis and 
+Task Recommendation System and the Medical Healthcare Recommendation 
+System. 
+5. Model Testing and Performance Evaluation: Validating machine learning 
+models using appropriate evaluation metrics, analyzing prediction accuracy, 
+and optimizing model performance to ensure reliable results. 
+6. Data Visualization and Reporting: Creating charts, graphs, and analytical 
+reports to effectively communicate findings and support data-driven decision-
+making. 
+--- PAGE 13 ---
+6  
+7. Project Collaboration: Working collaboratively with mentors and fellow 
+interns to discuss project requirements, share ideas, solve technical challenges, 
+and complete assigned tasks within the project timeline. 
+8. Problem Solving and Continuous Learning: Identifying technical 
+challenges, debugging application issues, learning new Data Science 
+techniques, and adapting to industry-standard tools and development practices 
+throughout the internship. 
+--- PAGE 14 ---
+7  
+4. TECHNOLOGIES USED 
+4.1 PYTHON:  
+ Python was the primary programming language used throughout 
+applications. It was used for data preprocessing, model development, prediction, 
+and implementing the application logic due to its simplicity and extensive library 
+support. 
+4.2 PANDAS: 
+ Pandas is a Python library used for data manipulation and analysis. During 
+the internship, it was used to load datasets, clean missing values, organize 
+data, and prepare datasets for machine learning models using DataFrames. 
+4.3 NUMPY : 
+ NumPy is a numerical computing library used for performing mathematical 
+and statistical operations on multidimensional arrays. It improved 
+computational efficiency while processing large datasets and carrying out 
+numerical calculations. 
+4.4 SCIKIT-LEARN: 
+ Scikit-learn is a machine learning library that provides tools for model 
+training, prediction, and evaluation. It was used to implement machine 
+learning algorithms, train predictive models, and evaluate their performance 
+in both internship projects. 
+4.5 MATPLOTLIB:  
+ Matplotlib is a data visualization library used to create charts and graphs. 
+It was utilized to visualize trends, distributions, and patterns within datasets, 
+making data interpretation easier. 
+--- PAGE 15 ---
+8  
+4.6 SEABORN:  
+ Seaborn is a statistical visualization library built on Matplotlib. It was used 
+to generate heatmaps, correlation plots, and other visualizations that supported 
+exploratory data analysis and improved the presentation of results. 
+4.7 FLASK:  
+ Flask is a lightweight Python web framework used to develop web-based 
+applications. It was used to integrate machine learning models with the user 
+interface, process user requests, and display prediction results. 
+4.8 HTML, CSS, AND JAVASCRIPT:  
+      HTML, CSS, and JavaScript were used to build the application's front-end 
+interface. HTML structured the web pages, CSS improved the appearance with 
+responsive designs, and JavaScript added interactivity and client-side validation. 
+4.9 GITHUB:  
+ GitHub is a cloud-based version control platform used to manage source 
+code and collaborate on software projects. During the internship, it was used to 
+maintain project repositories, track code changes, and support collaborative 
+development. 
+--- PAGE 16 ---
+9  
+5. INTERNSHIP PROJECT 
+5.1 PROJECT-1 TITLE: AI-POWERED EMPLOYEE MOOD ANALYSIS 
+& TASK RECOMMENDATION SYSTEM 
+ 
+The AI-Powered Employee Mood Analysis  and Task Recommendation System is a  Data 
+Science application developed to analyze employees' emotional states and recommend 
+suitable tasks based on their detected mood. The system utilizes machine learning techniques 
+to identify emotions from employee inputs and assists organizations in improving 
+productivity, employee well-being, and workplace efficiency. It also detects prolonged stress 
+or burnout and notifies the Human Resources department to facilitate timely 
+intervention.The project was developed during the first month of the internship at Amdox 
+Technologies, providing practical exposure to data preprocessing, machine learning model 
+development, predictive analytics, and intelligent recommendation systems. 
+5.1.1 OBJECTIVE 
+ 
+The primary objective of this project is to develop an intelligent system capable of 
+analyzing employee emotions, recommending appropriate tasks based on their emotional 
+state, and assisting organizations in monitoring employee well-being through machine 
+learning and data analytics. 
+ 5.1.2KEY FEATURES 
+5.1.2.1 Employee Mood Detection 
+Analyzes employee emotions using machine learning techniques to determine their current 
+emotional state. 
+5.1.2.2 Task Recommendation 
+Suggests tasks based on the detected mood to improve productivity and work efficiency. 
+ 
+--- PAGE 17 ---
+10  
+5.1.2.3 Stress Detection 
+Identifies employees experiencing prolonged stress or burnout and generates alerts for HR 
+intervention. 
+5.1.2.4Mood Analytics Dashboard 
+Provides visual reports and historical mood analysis to monitor employee well-being and 
+workplace trends. 
+ 
+5.1.3   MODULES DEVELOPED 
+ 
+• Employee Data Collection 
+• Data Preprocessing 
+• Mood Detection Module 
+• Task Recommendation Module 
+• HR Alert System 
+• Analytics Dashboard 
+ 
+5.1.4 SOFTWARES & TOOLS USED 
+ 
+• Python 
+• Pandas 
+• NumPy 
+• Scikit-learn 
+• Matplotlib 
+• Seaborn 
+• VS Code 
+• Git & GitHub 
+ 
+ 
+ 
+--- PAGE 18 ---
+11  
+ 
+5.1.5 IMPLEMENTATION: 
+ 
+Fig: 5.1 moving to the project’s main file directory  
+ 
+Fig: 5.2 running the backend server   
+--- PAGE 19 ---
+12  
+5.2 PROJECT-II TITLE: MEDICAL HEALTHCARE  
+RECOMMENDATION SYSTEM 
+The Medical Healthcare Recommendation System is an intelligent web-based 
+application developed to predict possible diseases based on user-provided symptoms 
+and provide personalized healthcare recommendations. The system utilizes machine 
+learning algorithms to analyze symptoms and generate recommendations such as 
+precautions, medications, diet plans, and workout suggestions. The application was 
+designed with a simple and interactive user interface, enabling users to obtain 
+preliminary healthcare guidance quickly and efficiently. This project was completed 
+during the second month of the internship at Amdox Technologies, providing 
+practical experience in healthcare analytics, predictive modeling, and 
+recommendation system development. 
+ 
+5.2.1 OBJECTIVE 
+The primary objective of this project is to develop a machine learning-based 
+healthcare recommendation system capable of predicting diseases from symptoms 
+and providing personalized healthcare recommendations to support early medical 
+awareness. 
+ 
+5.2.2 KEY FEATURES 
+ 
+5.2.2.1 Disease Prediction 
+Predicts possible diseases based on symptoms entered by the user using trained 
+machine learning models. 
+5.2.2.2 Healthcare Recommendations 
+Provides precautions, medications, diet plans, and workout suggestions based on the 
+ predicted disease.
+--- PAGE 20 ---
+13  
+5.2.2.3 Interactive User Interface 
+Allows users to enter symptoms easily and receive healthcare recommendations 
+through a simple web interface. 
+5.2.2.4 Fast and Accurate Results 
+Generates healthcare recommendations quickly using efficient prediction 
+algorithms. 
+ 
+5.2.3 MODULES DEVELOPED 
+• Symptom Input Module 
+• Data Preprocessing 
+• Disease Prediction Module 
+• Recommendation Engine 
+• Result Display Module 
+ 
+5.2.4 SOFTWARES & TOOLS USED 
+• Python 
+• Pandas 
+• NumPy 
+• Scikit-learn 
+• Flask 
+• HTML 
+• CSS 
+• JavaScript 
+• VS Code 
+• Git & GitHub 
+--- PAGE 21 ---
+14  
+     5.2.5 IMPLEMENTATION 
+ 
+ 
+ 
+ 
+Fig: 5.3 moving to the project directory and running backend 
+ 
+ 
+                                                               Fig: 5.4 home page
+--- PAGE 22 ---
+15  
+     6.SOURCE CODE 
+ 
+6.1 Project-1: 
+ 
+6.1.1 App.py: 
+import streamlit as st import altair as alt 
+import plotly.express as px import pandas as pd import numpy as np import os 
+import sqlite3 import cv2 import joblib 
+from datetime import datetime 
+import sounddevice as sd 
+import scipy.io.wavfile as wav 
+import speech_recognition as sr 
+from tensorflow.keras.models import load_model 
+from track_utils import ( 
+create_page_visited_table, 
+add_page_visited_details, 
+view_all_page_visited_details, 
+add_prediction_details, 
+view_all_prediction_details, 
+create_emotionclf_table, 
+IST 
+) 
+pipe_lr = joblib.load(open("./models/emotion_classifier_pipe_lr.pkl", "rb")) 
+def predict_emotions(docx): 
+return pipe_lr.predict([docx])[0] 
+def get_prediction_proba(docx): 
+return pipe_lr.predict_proba([docx]) 
+--- PAGE 23 ---
+16  
+emotions_emoji_dict = { 
+"happy": "●•^-", 
+"neutral": "˙•●−", 
+"sad":  "●’-`_", 
+"sadness":  "●’-`_", 
+"stressed":   "●'` ›‹", 
+"burnout": ".·`´^.˙ˆ." 
+} 
+def init_db(): 
+conn = sqlite3.connect("workspace_data.db", check_same_thread=False) 
+c = conn.cursor() 
+c.execute("""CREATE TABLE IF NOT EXISTS tasks 
+(id INTEGER PRIMARY KEY, title TEXT, urgency INTEGER, status 
+TEXT)""") 
+c.execute("""CREATE TABLE IF NOT EXISTS emotion_logs 
+(id INTEGER PRIMARY KEY, emp_id TEXT, emotion TEXT, 
+stress TEXT, timestamp DATETIME)""") 
+conn.commit() 
+return conn 
+conn = init_db() 
+BASE_DIR = os.path.dirname(os.path.abspath( file )) 
+cnn_model = load_model(os.path.join(BASE_DIR, "emotion_cnn_model.h5")) 
+emotion_labels = { 
+0: "angry", 1: "disgusted", 2: "fearful", 
+3: "happy", 4: "sad", 5: "surprised", 6: "neutral" 
+--- PAGE 24 ---
+17  
+} 
+stress_map = { 
+"happy": "Low", "neutral": "Low", 
+"surprised": "Medium", "sad": "Medium", 
+"fearful": "High", "angry": "High", "disgusted": "High" 
+} 
+def get_recommendation(current_stress): 
+df = pd.read_sql_query( 
+"SELECT * FROM tasks WHERE status='Pending'", conn 
+) 
+if df.empty: 
+return "No tasks available. Manager must add tasks." 
+if current_stress == "High": 
+task = df.sort_values("urgency").iloc[0] 
+return f".•9„˙ RELAX:  {task['title']}  (Urgency  {task['urgency']})" 
+else: 
+task = df.sort_values("urgency", ascending=False).iloc[0] 
+return f"7'•˙¸.s FOCUS: {task['title']} (Urgency {task['urgency']})" 
+st.set_page_config(page_title="AI based Task Optimizer", layout="wide") 
+st.title("˛C* Unified Emotion Intelligence Platform") 
+create_page_visited_table() 
+create_emotionclf_table() 
+tab1, tab3 = st.tabs([ 
+") • ¸‘)   Emotion Detection", 
+"¡ç#/  Monitor" 
+--- PAGE 25 ---
+18  
+]) 
+with tab1: 
+add_page_visited_details("Emotion System", datetime.now(IST)) 
+st . s u b he a de r ( " C˛* Multimodal Emotion → Stress → Task Optimizer") 
+st.markdown("### •¸‘ )   Text Emotion Detection") 
+with st.form("emotion_form"): 
+raw_text = st.text_area("Enter text") 
+submit = st.form_submit_button("Analyze") 
+if submit: 
+prediction = predict_emotions(raw_text) 
+probability = get_prediction_proba(raw_text) 
+add_prediction_details( 
+raw_text, prediction, np.max(probability), datetime.now(IST) 
+) 
+st.success(f"{prediction} {emotions_emoji_dict.get(prediction,'')}") 
+st.write(f"Confidence: {np.max(probability):.2f}") 
+proba_df = pd.DataFrame(probability, columns=pipe_lr.classes_).T.reset_index() 
+proba_df.columns = ["Emotion", "Probability"] 
+ fig = alt.Chart(proba_df).mark_bar().encode(x="Emotion", y="Probability", 
+color="Emotion" 
+) 
+st.altair_chart(fig, use_container_width=True) 
+st.divider() 
+st.markdown("### * ˙·*˙· Webcam Emotion → Task") 
+emp_id = st.text_input("Employee ID", "EMP_001") 
+--- PAGE 26 ---
+19  
+if "camera_on" not in st.session_state: 
+st.session_state.camera_on = False 
+if st.button("▶ Start Camera"): 
+st.session_state.camera_on = True 
+if st.button("■ Stop Camera"): 
+st.session_state.camera_on = False 
+frame_placeholder = st.empty() 
+status_placeholder = st.empty() 
+if st.session_state.camera_on: 
+cap = cv2.VideoCapture(0) 
+while st.session_state.camera_on and cap.isOpened(): 
+ret, frame = cap.read() 
+if not ret: 
+break 
+gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) 
+face = cv2.resize(gray, (48, 48)) / 255.0 
+face = face.reshape(1, 48, 48, 1) 
+pred = cnn_model.predict(face, verbose=0) 
+emotion = emotion_labels[np.argmax(pred)] 
+stress = stress_map[emotion] 
+conn.execute( 
+"INSERT INTO emotion_logs (emp_id, emotion, stress, timestamp) VALUES 
+(?,?,?,?)", 
+(emp_id, emotion, stress, datetime.now()) 
+) 
+conn.commit() 
+--- PAGE 27 ---
+20  
+frame_placeholder.image(frame, channels="BGR") 
+status_placeholder.success( 
+f"Emotion: {emotion} | Stress: {stress}\n{get_recommendation(stress)}" 
+) 
+cap.release() 
+st.divider() 
+st.markdown("### •3! Live Voice Stress Detection") 
+if st.button("Record Voice (5 seconds)"): 
+DURATION = 5 
+RATE = 44100 
+FILE = "voice.wav" 
+audio = sd.rec(int(DURATION * RATE), samplerate=RATE, channels=1) 
+sd.wait() 
+wav.write(FILE, RATE, audio) 
+r = sr.Recognizer() 
+with sr.AudioFile(FILE) as source: 
+audio_data = r.record(source) 
+text = r.recognize_google(audio_data)st.write("You said:", text) 
+stress_words = ["stress", "tired", "pressure", "deadline", "anxious"] 
+stress = "High" if any(w in text.lower() for w in stress_words) else "Low" 
+st.warning(f"Stress Level: {stress}") 
+st.info(get_recommendation(stress)) 
+with tab3: 
+add_page_visited_details("Monitor", datetime.now(IST)) 
+st.subheader("¡#ç / Monitoring Dashboard") 
+--- PAGE 28 ---
+21  
+# ´'_▲·` STRESS ALERTS 
+st.subheader("_´·▲'` Employee Stress Alerts") 
+alert_df = pd.read_sql_query( 
+"SELECT emp_id, emotion, stress, timestamp FROM emotion_logs WHERE 
+stress='High' ORDER BY timestamp DESC", 
+conn 
+) 
+if alert_df.empty: 
+st.s uccess(" ⬛  No high stress 
+detected") else: 
+for _, row in alert_df.iterrows(): 
+st.error( 
+f"Employee: {row['emp_id']} | Emotion: {row['emotion']} | Time: 
+{row['timestamp']}" 
+) 
+st.divider() 
+st .subhe ade r("☼O◦ Manager Task Control") 
+with st.form("task_form"): 
+title = st.text_input("Task Name") 
+urgency = st.slider("Urgency", 1, 5, 3) 
+if st.form_submit_button("Add Task"): 
+conn.execute( 
+"INSERT INTO tasks (title, urgency, status) VALUES (?, ?, 'Pending')", 
+(title, urgency) 
+) 
+conn.commit()  
+--- PAGE 29 ---
+22  
+6.2 Project-2 
+6.2.1 App.py 
+from flask import Flask, render_template, request 
+import pickle 
+import pandas as pd 
+import numpy as np 
+import matplotlib.pyplot as plt 
+import sqlite3 
+from datetime import datetime 
+app = Flask( name ) 
+structured_model = pickle.load(open("disease_model.pkl", "rb")) 
+nlp_model = pickle.load(open("nlp_model.pkl", "rb")) 
+vectorizer = pickle.load(open("tfidf_vectorizer.pkl", "rb")) 
+training_data = pd.read_csv("Training.csv") 
+description = pd.read_csv("symptom_Description.csv") 
+precautions = pd.read_csv("symptom_precaution.csv") 
+medications = pd.read_csv("symptom_Medication.csv") 
+diets = pd.read_csv("symptom_Diet.csv") 
+workout = pd.read_csv("symptom_Workout.csv") 
+def init_db(): 
+conn = sqlite3.connect("predictions.db") 
+c = conn.cursor() 
+c.execute(""" 
+CREATE TABLE IF NOT EXISTS predictions ( 
+id INTEGER PRIMARY KEY AUTOINCREMENT, 
+--- PAGE 30 ---
+23  
+disease TEXT, 
+model_type TEXT, 
+confidence REAL, 
+timestamp TEXT 
+) 
+""") 
+conn.commit() 
+conn.close() 
+init_db() 
+symptoms_list = training_data.columns[:-1] 
+symptom_index = {symptom: index for index, symptom in enumerate(symptoms_list)} 
+def clean_text(text): 
+return str(text).strip().lower().replace("_", " ") 
+for df in [description, precautions, medications, diets]: 
+df["Disease"] = df["Disease"].apply(clean_text) 
+if "disease" in workout.columns: 
+workout["disease"] = workout["disease"].apply(clean_text) 
+else: 
+workout["Disease"] = workout["Disease"].apply(clean_text) 
+def get_description(disease): 
+disease = clean_text(disease) 
+row = description[description["Disease"] == disease] 
+return row["Description"].values[0] if not row.empty else "Description not found." 
+def get_precautions(disease): 
+disease = clean_text(disease) 
+--- PAGE 31 ---
+24  
+row = precautions[precautions["Disease"] == disease] 
+return row.iloc[0, 1:].dropna().tolist() if not row.empty else ["No precautions found."] 
+def get_medications(disease): 
+disease = clean_text(disease) 
+row = medications[medications["Disease"] == disease] 
+return row.iloc[0, 1:].dropna().tolist() if not row.empty else ["No medications found."] 
+def get_diet(disease): 
+disease = clean_text(disease) 
+row = diets[diets["Disease"] == disease] 
+return row.iloc[0, 1:].dropna().tolist() if not row.empty else ["No diet 
+recommendations found."] 
+def get_workout(disease): 
+disease = clean_text(disease) 
+if "disease" in workout.columns: 
+row = workout[workout["disease"] == disease] 
+else: 
+row = workout[workout["Disease"] == disease] 
+return row.iloc[0, 1:].dropna().tolist() if not row.empty else ["No workout suggestions 
+found."] 
+@app.route("/") 
+def home(): 
+return render_template("index.html", symptoms=symptoms_list) 
+@app.route("/predict", methods=["POST"]) 
+def predict(): 
+user_text = request.form.get("text_input") 
+nlp_prediction = None 
+--- PAGE 32 ---
+25  
+nlp_confidence = None 
+if user_text and user_text.strip() != "": 
+transformed = vectorizer.transform([user_text]) 
+nlp_prediction = nlp_model.predict(transformed)[0] 
+nlp_confidence = round(nlp_model.predict_proba(transformed).max() * 100, 2) 
+selected_symptoms = request.form.getlist("symptoms") 
+structured_prediction = None 
+structured_confidence = None 
+if selected_symptoms: 
+input_vector = np.zeros(len(symptoms_list)) 
+for symptom in selected_symptoms: 
+if symptom in symptom_index: 
+input_vector[symptom_index[symptom]] = 1 
+input_vector = input_vector.reshape(1, -1) 
+structured_prediction = structured_model.predict(input_vector)[0] 
+structured_confidence = round(structured_model.predict_proba(input_vector).max() 
+* 100, 2) 
+final_prediction = structured_prediction or nlp_prediction 
+if not final_prediction: 
+return render_template("index.html", symptoms=symptoms_list) 
+dis_des = get_description(final_prediction) 
+my_precautions = get_precautions(final_prediction) 
+meds = get_medications(final_prediction) 
+my_diet = get_diet(final_prediction) 
+my_workout = get_workout(final_prediction) 
+--- PAGE 33 ---
+26  
+return render_template( 
+"index.html", 
+symptoms=symptoms_list, 
+predicted_disease=final_prediction, 
+dis_des=dis_des, 
+my_precautions=my_precautions, 
+medications=meds, 
+my_diet=my_diet, 
+workout=my_workout, 
+structured_confidence=structured_confidence, 
+nlp_confidence=nlp_confidence 
+) 
+@app.route("/analytics") 
+def analytics(): 
+conn = sqlite3.connect("predictions.db") 
+df = pd.read_sql_query("SELECT * FROM predictions", conn) 
+conn.close() 
+if df.empty: 
+return "No predictions yet." 
+disease_counts = df["disease"].value_counts() 
+plt.figure(figsize=(8,5)) 
+disease_counts.plot(kind="bar") 
+plt.title("Most Predicted Diseases") 
+plt.xlabel("Disease") 
+plt.ylabel("Count") 
+--- PAGE 34 ---
+27  
+plt.tight_layout() 
+disease_graph = "static/dynamic_disease.png" 
+plt.savefig(disease_graph) 
+plt.close() 
+model_counts = df["model_type"].value_counts() 
+plt.figure(figsize=(6,6)) 
+model_counts.plot(kind="pie", autopct="%1.1f%%") 
+plt.title("Model Usage Distribution") 
+plt.ylabel("") 
+plt.tight_layout() 
+model_graph = "static/model_usage.png" 
+plt.savefig(model_graph) 
+plt.close() 
+return render_template( 
+"analytics.html", 
+disease_graph=disease_graph, 
+model_graph=model_graph 
+) 
+if   name == " main ": 
+app.run(debug=True) 
+--- PAGE 35 ---
+28  
+ 
+7.1 PROJECT-1 
+ 
+7.OUTPUT: 
+ 
+Fig:7.1Home Page 
+Fig:7.2 Task Control
+
+--- PAGE 36 ---
+29  
+7.2 PROJECT-2 
+ 
+Fig:7.3 Symptoms Input Page 
+ 
+ 
+Fig.7.4 Model Predictions And Suggestions
+
+--- PAGE 37 ---
+30  
+                                           8.CONCLUSION 
+ 
+My internship at Amdox Technologies has been a  highly enriching and valuable  
+learning experience, providing me with the opportunity to apply and strengthen my 
+knowledge in Data Science, Machine Learning, and Data Analytics through real -world 
+projects. Working under the guidance of experienced industry mentors, I collaborated with 
+my team to successfully develop two intelligent applications: the AI -Powered Employee 
+Mood Analysis and Task Recommendation System and the Medical Healthcare 
+Recommendation System. These projects enabled me to understand the practical 
+application of machine learning techniques in solving real -world business and healthcare 
+challenges. 
+Throughout the internship, I gained hands -on experience using technologies such as 
+Python, Pandas, NumPy, Scikit -learn, Matplotlib, Seaborn , Flask, HTML, CSS, 
+JavaScript, and GitHub. I was actively involved in various stages of project development, 
+including data preprocessing, exploratory data analysis, machine learning model 
+development, performance evaluation, recommendation system implementation, and web 
+application integration. These experiences strengthened my understanding of data -driven 
+decision-making and the complete machine learning development lifecycle. 
+The internship not only enhanced my technical knowledge but also improved my 
+analytical thinking,  problem-solving abilities, teamwork, communication, and project 
+documentation skills. Working on real -time datasets and intelligent applications gave me 
+valuable exposure to industry -standard development practices and helped me understand 
+the importance of developing scalable, efficient, and user -centric software solutions. It 
+also increased my confidence in applying theoretical concepts to practical scenarios while 
+working collaboratively within a professional environment. 
+Overall, this internship served as an important milestone in my professional journey. 
+It provided me with practical industrial exposure, strengthened my technical foundation 
+--- PAGE 38 ---
+31  
+in Data Science and Machine Learning, and prepared me to undertake more advanced 
+projects in Artificial Intelligence, Data Analytics, and Software Development. The 
+knowledge, experience, and confidence gained during this internship will play a 
+significant role in achieving my future career goals as a technology professional. 
+--- PAGE 39 ---
+32  
+                                              9.CERTIFICATE 
+ 
+--- PAGE 40 ---
+33  
+SRM VALLIAMMAI ENGINEERING COLLEGE 
+(An Autonomous Institution) ESTD. 1999 - Accredited by NBA - Approved by AICTE 
+‘A’ Grade Accreditation by NAAC ISO 2 1001:2018 Certified - Affiliated to Anna 
+University Chennai 
+ 
+ 
+CENTRE OF EXCELLENCE IN SUSTAINABILITY 
+SDG CERTIFICATE 
+This is to certify that the internship has been successfully completed by Kevin Raj S 
+(142223104071) of B.E. – Computer Science and Engineering, during the academic 
+year 2026-27. This work aligns with the United Nations Sustainable Development Goals 
+and mapped to the following Sustainable Development Goal(s) (SDGs): 
+ 
+SDG 
+Number 
+Name Brief Justification 
+SDG 3 Good Health and Well-Being Supports early disease prediction and personalized healthcare 
+recommendations, promoting preventive healthcare 
+SDG 4 Quality Education Enhances practical learning in Data Science and Machine 
+Learning through industry -based projects and hands -on 
+technical training. 
+SDG 8 Decent Work and Economic 
+Growth 
+Improves employee well-being and workplace 
+productivity through intelligent mood analysis and task 
+recommendation. 
+SDG 9 Industry, Innovation 
+and Infrastructure 
+Drives innovation by applying Artificial Intelligence and 
+Machine Learning to develop intelligent healthcare and 
+workplace solutions. 
+ 
+ 
+ 
+ 
+                                MENTOR                             CES COORDINATOR HOD/CSE 
+SRM Nagar, Kattankulathur - 603203, Chengalpattu, Tamil Nadu, India 
+Phone : 044 - 27454784, 27454726 & 274514 
+
