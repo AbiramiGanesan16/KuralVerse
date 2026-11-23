@@ -1,0 +1,25 @@
+# Java build output
+*.class
+
+# IDE settings
+.idea/
+.vscode/
+*.iml
+
+# Build directories
+bin/
+out/
+target/
+build/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Python cache (used by optional helper scripts)
+__pycache__/
+*.py[cod]
+
+# Generated reports and temporary extracted content
+*_Report.docx
+sample_report_extracted.txt
